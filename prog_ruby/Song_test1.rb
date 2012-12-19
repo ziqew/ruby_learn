@@ -1,6 +1,7 @@
 class Song
-  @@plays=0
-  attr_reader :name, :artist 
+  #@@plays=0
+
+  attr_reader :name, :artist, :duration 
   attr_writer:duration
  
  def inspect
@@ -19,6 +20,16 @@ class Song
 
   def durationInMinutes=(value)
     @duration = (value*60).to_i
+  end
+
+  def play # instance method
+    @plays += 1
+    @@plays += 1
+    "This  song: #@plays plays. Total #@@plays plays."
+  end
+
+  def Song.foo     # class method
+    puts "foo"
   end
 
 end
@@ -42,19 +53,24 @@ class KaraokeSong < Song
   
 end
 
-
+Song.foo
 
 song = Song.new("Bicylops", "Fleck", 260)
 
 song.duration=60
+
 puts song.duration
+
 puts song.name
 puts "duration in minute"
 puts song.durationInMinutes
 
 song.durationInMinutes = 2
 puts "duration after set value in durationInMinutes"
-puts song.duration
+#puts song.duration
+
+#puts "play:"
+#puts song.play
 
 ks = KaraokeSong.new("My Way", "Sinatra", 225, "And now, the...")
 
