@@ -2130,3 +2130,36 @@ Served asset /products.css - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-29 14:54:23 +0800
 Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-29 15:50:36 +0800
+Served asset /rails.png - 200 OK (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-29 15:51:24 +0800
+Processing by StoreController#index as HTML
+  Rendered store/index.html.erb within layouts/application (28.3ms)
+Compiled store.css  (9ms)  (pid 1433)
+Compiled application.css  (23ms)  (pid 1433)
+Compiled store.js  (695ms)  (pid 1433)
+Compiled application.js  (709ms)  (pid 1433)
+Completed 200 OK in 932ms (Views: 931.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-11-29 15:51:25 +0800
+Served asset /products.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2013-11-29 15:51:25 +0800
+Served asset /store.css - 200 OK (1ms)
+
+
+Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2013-11-29 15:51:25 +0800
+Served asset /store.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-29 15:51:25 +0800
+Served asset /jquery.js - 304 Not Modified (2ms)
