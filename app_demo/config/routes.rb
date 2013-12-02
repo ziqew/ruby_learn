@@ -1,19 +1,26 @@
 AppDemo::Application.routes.draw do
-  resources :orders
+  get 'admin' => 'admin#index'
 
+  controller :sessions do
+    get 'login' => :new
 
-  resources :line_items
+    post 'login' => :create
 
-
-  resources :carts
-
-
-  get "store/index"
-
-
-  resources :products do
-    get :who_bought, on: :member
+    delete 'logout' => :destroy
   end
+
+
+  scope '(:locale)' do
+    resources :users
+    resources :orders
+    resources :line_items
+    resources :carts
+    resources :products do
+      get :who_bought, on: :member
+    end
+    root to: 'store#index', as: 'store'
+  end
+
 
 
   get "say/hello"
