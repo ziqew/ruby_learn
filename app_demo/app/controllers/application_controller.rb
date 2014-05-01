@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     Cart.find(session[:cart_id])
-    rescue ActiveRecord::RecordNotFound
+  rescue ActiveRecord::RecordNotFound
     cart=Cart.create
     session[:cart_id]=cart.id
     cart
@@ -34,6 +34,6 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { locale: I18n.locale }
+    {locale: I18n.locale}
   end
 end
