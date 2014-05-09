@@ -20881,3 +20881,177 @@ Started GET "/assets/a.png" for 127.0.0.1 at 2014-05-09 15:15:07 +0800
 Served asset /a.png - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (4.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateProducts (20131120084619)
+Migrating to CreateCarts (20131130054005)
+Migrating to CreateLineItems (20131130054512)
+Migrating to AddQuantityToLineItems (20131130075805)
+Migrating to CombineItemsInCart (20131130080116)
+Migrating to CreateOrders (20131202061502)
+Migrating to AddOrderIdToLineItem (20131202061534)
+Migrating to CreateUsers (20131202071118)
+Migrating to DeviseCreateUserAuths (20140509072959)
+  [1m[35m (392.2ms)[0m  CREATE TABLE `user_auths` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (268.0ms)[0m  [1mCREATE UNIQUE INDEX `index_user_auths_on_email` ON `user_auths` (`email`)[0m
+  [1m[35m (155.8ms)[0m  CREATE UNIQUE INDEX `index_user_auths_on_reset_password_token` ON `user_auths` (`reset_password_token`)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140509072959')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 17:21:27 +0800
+Processing by StoreController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2014-05-09 09:21:27', '2014-05-09 09:21:27')
+  [1m[36m (17.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` ORDER BY title
+  Rendered store/index.html.erb within layouts/application (27.4ms)
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/4e5c2e4754644b78586a5bbf39ed790bb1f042aa/admindash.css.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/2466b4d2c0f037d3539a673414d4730361aaad2c/bootstrap.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_variables.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_mixins.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_hide-text.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_opacity.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_image.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_labels.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_reset-filter.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_resize.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_responsive-visibility.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_size.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_tab-focus.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_text-emphasis.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_text-overflow.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_vendor-prefixes.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_alerts.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_buttons.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_panels.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_pagination.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_list-group.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_nav-divider.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_forms.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_progress-bar.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_table-row.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_background-variant.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_border-radius.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_gradients.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_clearfix.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_center-block.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_nav-vertical-align.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_grid-framework.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/d8de7bbf31bc81bb1039a481cafbf52facccbb90/_grid.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_normalize.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_print.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_glyphicons.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_scaffolding.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_type.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_code.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_grid.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_tables.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_forms.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_buttons.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_component-animations.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_dropdowns.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_button-groups.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_input-groups.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_navs.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_navbar.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_pagination.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_pager.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_labels.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_badges.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_jumbotron.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_thumbnails.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_alerts.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_progress-bars.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_media.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_list-group.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_panels.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_responsive-embed.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_wells.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_close.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_modals.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_tooltip.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_popovers.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_carousel.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_utilities.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/06394dc67d39bb7cef591a6c74b07b1630972c79/_responsive-utilities.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Compiled admindash.css  (2806ms)  (pid 4924)
+Warning. Error encountered while saving cache /Users/ziqew/gitrepo/ruby_learn/app_demo/tmp/cache/sass/4e5c2e4754644b78586a5bbf39ed790bb1f042aa/application.css.scssc: can't dump anonymous class #<Class:0x007fe30b2896c8>
+Compiled application.css  (16ms)  (pid 4924)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `line_items` WHERE `line_items`.`cart_id` = 11[0m
+  Rendered carts/_cart.html.erb (0.6ms)
+Completed 200 OK in 3587.5ms (Views: 3538.3ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /bootstrap.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /jquery-ui.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /store.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /store.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admindash.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /admindash.js - 200 OK (40ms)
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /carts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /line_items.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /orders.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /products.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /say.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-05-09 17:21:31 +0800
+Served asset /store.js - 304 Not Modified (0ms)
