@@ -1,4 +1,6 @@
 AppDemo::Application.routes.draw do
+  devise_for :user_auths
+
   get 'admin' => 'admin#index'
 
   controller :sessions do
@@ -21,11 +23,6 @@ AppDemo::Application.routes.draw do
     root to: 'store#index', as: 'store'
   end
 
-
-
-  get "say/hello"
-
-  get "say/goodbye"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,21 +1,40 @@
-<div class="depot_form">
-  <% if flash[:alert] %>
-      <p id="notice"><%= flash[:alert] %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Signin</title>
+
+  <%= stylesheet_link_tag "signin"%>
+</head>
+
+<body>
+
+<div class="container">
+
+
+  <%= form_tag('/login', class:"form-signin" , role:"form") do %>
+
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <%= text_field_tag :name, params[:name] , class:"form-control" , placeholder:"Name" %>
+      <%= password_field_tag :password, params[:password] , class:"form-control" , placeholder:"Password" %>
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+
+      <%= submit_tag "Sign in", :class=>"btn btn-lg btn-primary btn-block"  %>
   <% end %>
-  <%= form_tag do %>
-      <fieldset>
-        <legend>Please Log In</legend>
-        <div>
-          <%= label_tag :name, 'Name:' %>
-          <%= text_field_tag :name, params[:name] %>
-        </div>
-        <div>
-          <%= label_tag :password, 'Password:' %>
-          <%= password_field_tag :password, params[:password] %>
-        </div>
-        <div>
-          <%= submit_tag "Login" %>
-        </div>
-      </fieldset>
-  <% end %>
-</div>
+
+
+
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
+
