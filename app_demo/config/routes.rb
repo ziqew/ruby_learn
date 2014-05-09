@@ -1,5 +1,4 @@
 AppDemo::Application.routes.draw do
-  devise_for :user_auths
 
   get 'admin' => 'admin#index'
 
