@@ -33,12 +33,12 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
-            <li><%= button_to 'Logout', logout_path, method: :delete , class:"btn btn-default navbar-btn"%></li>
+            <li><%= button_to 'Logout', logout_path, method: :delete , class:"btn btn-primary navbar-btn"%></li>
             <li><a href="#">Help</a></li>
           </ul>
       <% else  %>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= button_to 'Login', login_path, method: :new ,class:"btn btn-default navbar-btn"%></li>
+            <li><%= button_to 'Login', login_path, method: :new ,class:"btn btn-primary navbar-btn"%></li>
             <li><a href="#">Help</a></li>
 
           </ul>
